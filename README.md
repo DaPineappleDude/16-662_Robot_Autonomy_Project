@@ -14,7 +14,7 @@ Prerequisites <br />
 3.download and make the ros package "apriltags_ros” http://wiki.ros.org/apriltags_ros <br />
 
 4.download the whole package in code : RA project,which include three ros package: 1. Show_object 2.adjust_tf <br /> 3.camera_info_publisher (the camera info publisher, not used it here) <br />
-5.If you need more model mesh, you can dowload from ycb data set: http://rll.eecs.berkeley.edu/ycb/ <br />
+5.If you need more mesh model, you can dowload from ycb data set: http://rll.eecs.berkeley.edu/ycb/ <br />
 
 
 A.Show object using existing tf <br />
