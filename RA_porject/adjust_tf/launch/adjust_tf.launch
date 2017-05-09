@@ -1,0 +1,6 @@
+<launch>
+   <include file="$(find realsense_camera)/launch/sr300_nodelet_rgbd.launch"/>
+   <include file="$(find apriltags_ros)/launch/example.launch"/>
+   <node pkg="adjust_tf" type="tf_publisher" name="tf_publ" output="screen" />
+   <node pkg="adjust_tf" type="tf_tele" name="tf_teler" output="screen"/>
+</launch>

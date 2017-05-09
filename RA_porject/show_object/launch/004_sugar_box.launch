@@ -1,0 +1,7 @@
+<launch>
+   <param name="robot_description" textfile="urdf/004_sugar_box.urdf" />
+
+   <node pkg="tf" type="static_transform_publisher" name="tf_static_pub" args="0.025000 0.060000 -0.030000 0.486176 0.515281 0.546430 -0.446691
+  apriltag_frame object_link 100" />  
+   <node name="rviz" pkg="rviz" type="rviz" required="true" />
+</launch>

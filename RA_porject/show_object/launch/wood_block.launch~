@@ -1,0 +1,6 @@
+<launch>
+   <param name="robot_description" textfile="urdf/036_wood_block.urdf" />
+
+   <!--node pkg="tf" type="static_transform_publisher" name="wood_wrt_apr" args="0 0 0 0 0 0 1  apriltag_frame wood_link 100"/-->   
+   <node name="rviz" pkg="rviz" type="rviz" required="true" />
+</launch>

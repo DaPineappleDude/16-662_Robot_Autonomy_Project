@@ -1,0 +1,10 @@
+<launch>
+   <param name="robot_description" textfile="urdf/024_bowl.urdf" />
+
+   <!--node pkg="tf" type="static_transform_publisher" name="wood_wrt_apr" args="0 0 0 0 0 0 1  apriltag_frame object_link 100"/-->
+   
+   <node pkg="adjust_tf" type="tf_publisher" name="tf_publ" output="screen" />
+   <node pkg="adjust_tf" type="tf_tele" name="tf_teler" output="screen"/>
+   
+   <node name="rviz" pkg="rviz" type="rviz" required="true" />
+</launch>

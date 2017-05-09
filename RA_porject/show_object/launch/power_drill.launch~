@@ -1,0 +1,6 @@
+<launch>
+   <param name="robot_description" textfile="urdf/035_power_drill.urdf" />
+
+   <!--node pkg="tf" type="static_transform_publisher" name="apr" args="0.005000 0.040000 -0.020000 -1.500000 0.400000 0.000000  apriltag_frame object_link 100" /-->  
+   <node name="rviz" pkg="rviz" type="rviz" required="true" />
+</launch>

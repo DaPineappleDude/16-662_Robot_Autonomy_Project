@@ -1,0 +1,4 @@
+<launch>
+   <node pkg="adjust_tf" type="tf_publisher" name="tf_publ" output="screen" />
+   <node pkg="adjust_tf" type="tf_tele" name="tf_teler" output="screen"/>
+</launch>
