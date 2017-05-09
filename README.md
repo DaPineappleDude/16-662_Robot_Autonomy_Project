@@ -36,12 +36,14 @@ PS. In “object”.launch, you show comment the static transformation node: <br
 4.Open new terminal console, cd your workspace<br />
 5.$roslaunch adjust_tf.launch<br />
 6. Then you can type the char and press enter in the terminal to change the tf from object to apriltags fram and see what the change via rviz.<br />
+char result<br />
+q/a  In x axis +0.005/-0.005<br />
+w/s  In y axis +0.005/-0.005<br />
+e/d  In z axis +0.005/-0.005<br />
+r/f  Rotate x-axis +0.1 /-0.1radius<br />
+t/g  Rotate y-axis +0.1 /-0.1radius<br />
+y/h  Roate z-axis +0.1 /-0.1radius<br />
 
-q/a In x axis +0.005/-0.005<br />
-w/s In y axis +0.005/-0.005<br />
-e/d In z axis +0.005/-0.005<br />
-r/f Rotate x-axis +0.1 /-0.1radius<br />
-t/g Rotate y-axis +0.1 /-0.1radius<br />
-y/h Roate z-axis +0.1 /-0.1radius<br />
+you type the character in the terminal and press Enter to see the result.<br />
 
 7. Then after you find the good tf from object to apriltags frame, you can record it, and save it at stage A.<br />
