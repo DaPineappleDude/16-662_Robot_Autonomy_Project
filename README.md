@@ -7,8 +7,8 @@ Collaboration on Robot Autonomy Project: An integrated system of 3D pose estimat
 ---------------------Pose Esitmation
 Robot autonomy 
 Pose estimation-ROS part
-All files were tested on ubuntu 14.04, and ros-indigo.
-Prerequisites
+All files were tested on ubuntu 14.04, and ros-indigo. \\
+Prerequisites \\
 1.Install librealsense: http://wiki.ros.org/librealsense#Installation_Prerequisites
 2.download and make the ros package “realsease_camera”: http://wiki.ros.org/realsense_camera
 3.download and make the ros package "apriltags_ros” http://wiki.ros.org/apriltags_ros
