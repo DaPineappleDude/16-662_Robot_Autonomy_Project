@@ -68,9 +68,8 @@ Use the function PCL to get the pose estimation under the robot base frame.
 
 
 
----------------------Pose Esitmation-------------------------------
-Robot autonomy <br />
-Pose estimation ROS part <br />
+-----------------------------Pose estimation ROS part-------------------------------
+
 All files were tested on ubuntu 14.04, and ros-indigo <br />
 Prerequisites <br />
 1.Install librealsense: http://wiki.ros.org/librealsense#Installation_Prerequisites <br />
