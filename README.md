@@ -13,7 +13,8 @@ Link to the image data set:https://drive.google.com/drive/folders/0B3SUGe-kEOL4M
 
 -- Multiple objects: LabelMeToolBox:https://drive.google.com/drive/folders/0B9acCGhIdEtKVW9mYkNDV3NPbnM?usp=sharing
 
-After you done labeling, download the images and the annotation files which is in the .xml format. Go to the LabelMeToolBox folder, use the demo_new.m to generate ground truth images based on the annotation you labeled by LabelMe. 
+After you done labeling, download the images and the annotation files which is in the .xml format. <br />
+Go to the LabelMeToolBox folder, use the demo_new.m to generate ground truth images based on the annotation you labeled by LabelMe. 
 
 In the demo_new.m, modify the directory according to your own setting, HOMEIMAGES is where you store the original JPEG Images, HOMEANNOTATIONS is where you store your .xml file, NEWHOMELMSEGMENTS is where you are going to store the ground truth images. 
 
@@ -21,7 +22,9 @@ You can set the image size by modifying the NEWIMAGESIZE, making the input image
 
 Define the class name of your chosen objects in objectlist which should be a string containing all the class name and separated by coma. 
 
-Now you can run the demo_new.m to generate data which could be used for training the FCN model. After running the script, three new folders and a report.txt file containing the number of each object’s appearance will be generated. The SegmentationClass containing the segmentation ground truth images, JPEGImages containing the original images, the Segmentation folder in ImageSets containing three txt files, which identify the image name of the training images, validation images and test images.
+Now you can run the demo_new.m to generate data which could be used for training the FCN model. <br />
+After running the script, three new folders and a report.txt file containing the number of each object’s appearance will be generated. <br />
+The SegmentationClass containing the segmentation ground truth images, JPEGImages containing the original images, the Segmentation folder in ImageSets containing three txt files, which identify the image name of the training images, validation images and test images.
 
 If you uncomment “LMdbshowscenes(LMquery(database, 'object.name', objectlist), HOMEIMAGES);
 ”, you will be able to check if you have labeled the objects correctly by visualization.
@@ -35,13 +38,14 @@ if you uncomment “LMdbshowobjects(LMquery(database, 'object.name', objectlist)
 ----------------------------------Train the FCN for segmentation--------------------------------------------
 
 When you create the dataset for training successfully, you can move on to the training stage. 
-Go to the fcn.berkeleyvision.org-master folder, which could be Git clone from the FCN Github:https://github.com/shelhamer/fcn.berkeleyvision.org.git. 
+Go to the fcn.berkeleyvision.org-master folder, which could be Git clone from the FCN Github:https://github.com/shelhamer/fcn.berkeleyvision.org.git. <br />
 Or you can download from:https://drive.google.com/drive/folders/0B9acCGhIdEtKa3FsVHE0QnRadWM?usp=sharing.
-Go to any voc-fcn folder (voc-fcn8s has the best result), there is a PYTHON script called solve.py which is used for training the network. Define your pre-trained model as the following format: “weights = '../voc-fcn8s/_iter_232000.caffemodel'”. Define your validation set by load the val.txt file you have created in the last step and give it to the variable val. 
-solver.step(num) means the caffemodel will be saved everything num iterations.
-“solver.prototxt” is where you define the learning setup and also the snapshot where you store the caffemodel during training. 
+Go to any voc-fcn folder (voc-fcn8s has the best result), there is a PYTHON script called solve.py which is used for training the network. Define your pre-trained model as the following format: “weights = '../voc-fcn8s/_iter_232000.caffemodel'”. Define your validation set by load the val.txt file you have created in the last step and give it to the variable val. <br />
+solver.step(num) means the caffemodel will be saved everything num iterations. <br />
+“solver.prototxt” is where you define the learning setup and also the snapshot where you store the caffemodel during training. <br />
 
-Modify the output size in the “train.prototxt”, “val.prototxt” and “deploy.prototxt” file which is used to define the network architecture in caffe according to the number of object classes, the correct output size should be the number of object classes + 1(indicating the background class). Remember to modify the name of the layers which you have modified the output size, just give any name you like as long as it is different from the original one to tell caffe that new parameters should be initialized to this layer so it will ignore the pre-trained weights whose dimension will not match after you change the output size.
+Modify the output size in the “train.prototxt”, “val.prototxt” and “deploy.prototxt” file which is used to define the network architecture in caffe according to the number of object classes, the correct output size should be the number of object classes + 1(indicating the background class). <br />
+Remember to modify the name of the layers which you have modified the output size, just give any name you like as long as it is different from the original one to tell caffe that new parameters should be initialized to this layer so it will ignore the pre-trained weights whose dimension will not match after you change the output size. <br />
 
 The input data layer is defined in the voc_layers.py under the fcn.berkeleyvision.org-master folder.
 
