@@ -1,8 +1,8 @@
 # 16-662_Robot_Autonomy_Project
-Collaboration on Robot Autonomy Project: An integrated system of 3D pose estimation and primitive robot actions for cluttered manipulation.
+Collaboration on Robot Autonomy Project: 
+An integrated system of 3D pose estimation and primitive robot actions for cluttered manipulation.
 
-
-Link to the data set:https://drive.google.com/drive/folders/0B3SUGe-kEOL4MXFzaU5VMFJRcUk?usp=sharing.
+Link to the image data set:https://drive.google.com/drive/folders/0B3SUGe-kEOL4MXFzaU5VMFJRcUk?usp=sharing.
 
 
 -----------------------------------Get the Training data-----------------------------------
