@@ -34,6 +34,10 @@ If you uncomment “LMdbshowscenes(LMquery(database, 'object.name', objectlist),
 if you uncomment “LMdbshowobjects(LMquery(database, 'object.name', objectlist), HOMEIMAGES);
 ”, you will be able to check of you labeled each single object properly by visualization.
 
+----------------------------------------Background substraction---------------------------------------------
+In this section, we use the depth information to substract objects from the images. 
+1. Open backgroundSubstract.m and check if all the objects are placed in the right path.
+2. change "class","i","j" according to your case 
 
 
 ----------------------------------Train the FCN for segmentation--------------------------------------------
